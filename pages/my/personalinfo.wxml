@@ -1,0 +1,34 @@
+<!--pages/my/personalinfo.wxml-->
+<view class="container">
+  <!-- 顶部logo页面 -->
+  <view class="top">
+    <image src="../../icons/logo.png"></image>
+  </view>
+   
+  <view class="menu">
+    <!-- 分割线 -->
+   <view class="hr"></view>
+    <view class="child">
+      <view class="detail" id="child1" bindtap="tapFun" >预约记录</view>
+      <image src="../../icons/right.png"></image>
+    </view>
+     <!-- 分割线 -->
+    <view class="hr"></view>
+    <view class="child">
+      <view class="detail" id="child2" bindtap="tapFun" >修改密码</view>
+      <image src="../../icons/right.png"></image>
+    </view>
+     <!-- 分割线 -->
+    <view class="hr"></view>
+    <view class="child">
+      <view class="detail" id="child3" bindtap="tapFun" >注销账户</view>
+      <image src="../../icons/right.png"></image>
+    </view>
+    <view class="hr"></view>
+    <view class="child">
+      <view class="detail" id="child4" bindtap="tapFun" >清理缓存</view>
+      <image src="../../icons/right.png"></image>
+    </view>
+    <view class="hr"></view>
+  </view>
+</view>

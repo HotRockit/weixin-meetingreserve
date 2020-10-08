@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "time_select": "../../../components/mytimeselect/time_select",
+    "date_select": "../../../components/dateselect/date_select",
+    "room_select": "../../../components/roomselect/room_select"
+  }
+}

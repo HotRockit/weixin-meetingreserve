@@ -1,0 +1,6 @@
+<!--components/roomselect/room_select.wxml-->
+<scroll-view scroll-x class="room_select" enable-flex="{{true}}">
+  <view class="box box_{{index}} {{item.room_name == select_room ? 'select' : ''}}" wx:for="{{room_range}}" wx:key="id" id="{{item.room_name}}" bindtap='tap'>
+    <view class="show">{{item.room_name}}</view>
+  </view>
+</scroll-view>

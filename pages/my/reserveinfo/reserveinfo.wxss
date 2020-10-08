@@ -1,0 +1,5 @@
+/* pages/my/reserveinfo/reserveinfo.wxss */
+
+.free{
+  height: 60rpx;
+}

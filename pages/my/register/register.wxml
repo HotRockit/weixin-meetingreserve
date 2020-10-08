@@ -1,0 +1,43 @@
+<!--pages/my/register/register.wxml-->
+<view class="content">
+  <!-- 账号 -->
+  <view class="register">
+    <view class="username">账号</view>
+    <view class="num">
+      <input placeholder="请输入账号" placeholder-style="color:#999999;" bindinput="usernameInput"/>
+    </view>
+  </view>
+
+  <!-- 分割线 -->
+  <view class="hr"></view>
+  <!-- 密码 -->
+  <view class="register">
+    <view class="password">密码</view>
+    <view class="num">
+      <input placeholder="请输入密码" password="{{isPassword}}" placeholder-style="color:#999999;" bindinput="passwordInput"/>
+    </view>
+    <view class="see"><image src="{{img}}"  bindtap="showPassword"></image></view>
+  </view>
+  <!-- 分割线 -->
+  <view class="hr"></view>
+  <!-- 确认密码 -->
+  <view class="register">
+    <view class="password">确认密码</view>
+    <view class="num">
+      <input placeholder="请再次输入密码" password="{{isPassword}}" placeholder-style="color:#999999;" bindinput="confirmPasswordInput"/>
+    </view>
+  </view>
+    <!-- 分割线 -->
+    <view class="hr"></view>
+  <!-- 手机号 -->
+  <view class="register">
+    <view class="phone">手机号</view>
+    <view class="num">
+      <input placeholder="请输入手机号"  placeholder-style="color:#999999;" bindinput="phoneInput"/>
+    </view>
+  </view>
+  <!-- 分割线 -->
+  <view class="hr"></view>
+  <!-- 注册按钮 -->
+  <button class="btn" type="{{btnstate}}" disabled="{{disabled}}"  bindtap="register">注册</button>
+</view>

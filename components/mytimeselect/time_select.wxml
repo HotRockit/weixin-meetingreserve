@@ -1,0 +1,16 @@
+<!--components/mytimeselect/time_select.wxml-->
+<view class="top">至少预约一小时</view>
+<scroll-view scroll-y class="time_select" enable-flex="{{true}}">
+  <view class="container">
+    <view class="box" wx:for="{{timeList}}" wx:key="id">
+      <view class="row">
+        <view class="column">{{item}}</view>
+        <!-- 将一个小时分成两部分 -->
+        <view class="column2"> 
+          <view class="time" id = "{{index*2}}" style="background-color: {{colorList[index*2]}};" bindtap="time_tap">{{wordList[index*2]}}</view>
+          <view class="time" id = "{{index*2+1}}" style="background-color: {{colorList[index*2+1]}};" bindtap="time_tap">{{wordList[index*2+1]}}</view>
+        </view>   
+      </view>
+    </view>
+  </view>
+</scroll-view>

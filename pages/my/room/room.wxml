@@ -1,0 +1,16 @@
+<!--pages/my/room/room.wxml-->
+<scroll-view scroll-y class="room_select" enable-flex="{{true}}">
+  <view class="container">
+    <view class="title">请选择会议室</view>
+    <view class="hr"></view>
+
+    <view class="box" wx:for="{{parseRoomList}}" wx:key="id">
+      <!-- 每一行两个会议室 -->
+      <view class="row">
+        <view class="column" wx:if='{{item.length > 0 ? true : false}}' id = "{{item[0].room_name}}" bindtap="room_tap">{{item[0].room_name}}</view>
+        <view class="column" wx:if='{{item.length > 1 ? true : false}}' id = "{{item[1].room_name}}" bindtap="room_tap">{{item[1].room_name}}</view>
+        <view class="column" wx:if='{{item.length > 2 ? true : false}}' id = "{{item[2].room_name}}" bindtap="room_tap">{{item[2].room_name}}</view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

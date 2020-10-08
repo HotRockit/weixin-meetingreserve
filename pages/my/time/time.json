@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "time_select": "../../../components/mytimeselect/time_select"
+  }
+}

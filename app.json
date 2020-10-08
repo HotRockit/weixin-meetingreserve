@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/my/login/login",
+    "pages/my/reserveinfo/reserveinfo",
+    "pages/my/time/time",
+    "pages/my/personalinfo",
+    "pages/my/register/register",
+    "pages/my/updatepassword/update_password",
+    "pages/index/index",
+    "pages/my/reserve/reserve",
+    "pages/logs/logs",
+    "pages/my/room/room"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "会议室预约",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#ff2d4a",
+    "backgroundColor": "#fafafa",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icons/home.png",
+        "selectedIconPath": "icons/home-o.png"
+      },
+      {
+        "pagePath": "pages/my/personalinfo",
+        "text": "我的",
+        "iconPath": "icons/my.png",
+        "selectedIconPath": "icons/my-o.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

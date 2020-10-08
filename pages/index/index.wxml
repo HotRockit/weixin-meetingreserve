@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<!-- /* 在这里创建日期视图 */ -->
+
+<!-- <view class="container">
+  总共可以提前预约六天，三行，每行两个
+
+  <view class="title">最多提前预约6天的会议室</view>
+    <view class="hr"></view>
+  <view class="row">
+    <view class="column" bindtap="">1</view>
+    <view class="column" bindtap="">2</view>
+  </view>
+  <view class="row">
+    <view class="column" bindtap="">3</view>
+    <view class="column" bindtap="">4</view>
+  </view>
+  <view class="row">
+    <view class="column" bindtap="">5</view>
+    <view class="column" bindtap="">6</view>
+  </view>
+</view> -->
+<date_select id="date_select" bindchange="date_select_change"></date_select>

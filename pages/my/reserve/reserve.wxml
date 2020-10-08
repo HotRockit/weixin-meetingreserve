@@ -1,0 +1,47 @@
+<!--pages/my/reserve/reserve.wxml-->
+<view class="content">
+  <!-- 会议室 -->
+  <view class="column">
+    <view class="label">会议室</view>
+    <view class="value">{{select_room}}</view>
+  </view>
+
+  <!-- 分割线 -->
+  <view class="hr"></view>
+  <!-- 用户 -->
+  <view class="column">
+    <view class="label">用户</view>
+    <view class="value">{{username}}</view>
+  </view>
+
+  <!-- 分割线 -->
+  <view class="hr"></view>
+  <!-- 时间-->
+  <view class="column">
+    <view class="label">时间</view>
+    <view class="value">{{time}}</view>
+  </view>
+
+    <!-- 分割线 -->
+    <view class="hr"></view>
+  <!-- 日期 -->
+  <view class="column">
+    <view class="label">日期</view>
+    <view class="value">{{select_date}}</view>
+  </view>
+
+  <!-- 分割线 -->
+  <view class="hr"></view>
+  <!-- 用途 -->
+  <view class="column">
+    <view class="label">申请原因</view>
+    <textarea placeholder="最多输入20个字" maxlength="20" bindinput="textInput"></textarea>
+  </view>
+
+
+  <!-- 分割线 -->
+  <view class="hr"></view>
+
+  <!-- 提交按钮 -->
+  <button class="btn" type="{{btnstate}}" disabled="{{disabled}}"  bindtap="addMeeting">确定</button>
+</view>

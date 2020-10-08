@@ -1,0 +1,42 @@
+/* pages/my/reserve/reserve.wxss */
+.content {
+  margin-top: 10rpx;
+  padding-top: 10rpx;
+}
+
+.column {
+  display: flex;
+  flex-direction: row;
+  padding-left: 40rpx;
+  padding-top: 40rpx;
+  padding-bottom: 20rpx;
+  width: 90%;
+}
+
+.column .label {
+  width: 20%;
+  font-weight: bold;
+  margin-right: 60rpx;
+}
+
+.value{
+  display: flex;
+  width: 80%;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+}
+
+.hr {
+  border: 2rpx solid #666666;
+  opacity: 0.2;
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+.btn {
+  width: 90%;
+  margin-top: 80rpx;
+  color: #999999;
+}

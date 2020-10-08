@@ -1,0 +1,55 @@
+/* components/mytimeselect/time_select.wxss */
+.container{
+  margin-top: 20rpx;
+  width: 90%;
+}
+
+.top{
+  display: flex;
+  font-size: 60rpx;
+  align-items: center;
+  justify-content: center;
+  height: 60rpx;
+}
+
+.box{
+  margin-left: 40rpx;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+}
+
+.column{
+  display: flex;
+  width: 20%;
+  height: 100rpx;
+  background-color: gray;
+  opacity: 0.8;
+  border: 2rpx solid #666666;
+  font-size: 20rpx;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.column2{
+  width: 80%;
+  height: 100rpx;
+  display: flex;
+  /* opacity: 0.3; */
+  flex-direction: column;
+}
+
+.time{
+  display: flex;
+  height: 50rpx;
+  border: 2rpx solid #666666;
+  font-size: 30rpx;
+  align-items: center;
+  justify-content: center;
+  /* font-weight: bold; */
+  color: black;
+}

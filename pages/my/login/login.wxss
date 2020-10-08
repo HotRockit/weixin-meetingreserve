@@ -1,0 +1,61 @@
+/* pages/my/login/login.wxss */
+
+.content {
+  margin-top: 80rpx;
+}
+
+.login {
+  display: flex;
+  flex-direction: row;
+  padding-left: 40rpx;
+  padding-top: 40rpx;
+  padding-bottom: 20rpx;
+  width: 90%;
+}
+
+.login .username {
+  font-weight: bold;
+  margin-right: 60rpx;
+}
+.login .password {
+  font-weight: bold;
+  margin-right: 60rpx;
+}
+
+.hr {
+  border: 2rpx solid #666666;
+  opacity: 0.2;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.see {
+  width: 40rpx;
+  position: absolute;
+  right: 60rpx;
+}
+
+.see image {
+  right: 40rpx;
+  width: 64rpx;
+  height: 50rpx;
+}
+
+.btn {
+  width: 90%;
+  margin-top: 80rpx;
+  color: #999999;
+}
+
+
+.operate {
+  display: flex;
+  flex-direction: row;
+}
+
+.operate view{
+  margin: 0 auto;
+  margin-top: 80rpx;
+  font-size: 30rpx;
+  color: #333333;
+}

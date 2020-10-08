@@ -1,0 +1,9 @@
+<!--pages/my/time/time.wxml-->
+<view class='container'>
+  <view class="group">
+    <time_select id="time_select" bindchange="time_select_change"></time_select>
+  </view>
+  <view class="group">
+    <button class="btn" type="{{btnstate}}" disabled="{{disabled}}"  bindtap="reserve">预定时间({{realTimeList[start_time+1]}}-{{realTimeList[end_time+2]}})</button>
+  </view>
+</view>

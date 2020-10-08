@@ -1,0 +1,50 @@
+/* pages/my/personalinfo.wxss */
+.container{
+  padding-top: 10rpx;
+  margin-top: 20rpx;
+}
+
+.container .top{
+  width: 90%;
+  height: 100rpx;
+}
+
+.container .top image{
+  height: 100rpx;
+}
+
+
+.container .menu{
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.container .menu .child{
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  height: 40rpx;
+}
+
+.container .menu .child .detail{
+  margin-left: 10rpx;
+  width: 80%;
+  height: 40rpx;
+}
+
+.container .menu .child image{
+  /* width: 20%; */
+  position: absolute;
+  right: 40rpx;
+  height: 40rpx;
+  width: 30rpx;
+}
+
+.hr {
+  border: 1px solid #666666;
+  opacity: 0.2;
+  margin-top: 20rpx;
+}
+

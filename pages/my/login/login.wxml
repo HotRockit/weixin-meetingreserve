@@ -1,0 +1,35 @@
+<!--pages/my/login/login.wxml-->
+<view class="content">
+  <!-- 账号 -->
+  <view class="login">
+    <view class="username">账号</view>
+    <view class="num">
+      <input placeholder="请输入账号或手机号" placeholder-style="color:#999999;" bindinput="usernameInput"/>
+    </view>
+  </view>
+
+  <!-- 分割线 -->
+  <view class="hr"></view>
+  <!-- 密码 -->
+  <view class="login">
+    <view class="password">密码</view>
+    <view class="num">
+      <input placeholder="请输入密码" password="{{isPassword}}" placeholder-style="color:#999999;" bindinput="passwordInput"/>
+    </view>
+    <view class="see"><image src="{{img}}" bindtap="showPassword"></image></view>
+  </view>
+
+  <!-- 分割线 -->
+  <view class="hr"></view>
+
+  <!-- 登陆按钮 -->
+  <button class="btn" type="{{btnstate}}" disabled="{{disabled}}"  bindtap="login">登录</button>
+
+  <!-- 注册导航 -->
+
+  <view class="operate">
+    <view><navigator url="../../my/register/register">注册账号</navigator></view>
+    <view>找回密码</view>
+  </view>
+
+</view>

@@ -1,0 +1,14 @@
+.container{
+  margin-top: 60rpx;
+  padding-top: 10rpx;
+}
+
+.group{
+  width: 90%;
+}
+
+.btn {
+  width: 90%;
+  margin-top: 60rpx;
+  color: #999999;
+}
