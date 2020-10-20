@@ -42,7 +42,9 @@ Component({
       })
       //获取总共有多少个会议
       for(let i=0;i<meetings.length;i++){
-        var words = meetings[i].reason.split('')   //拿到每一个汉字
+        //方格上显示详细信息：申请人加上申请理由
+        var detail = app.globalData.username+"&"+meetings[i].reason
+        var words = detail.split('')   //拿到每一个汉字
         //难点在于把每一个汉字映射到方格上面
         var gap = meetings[i].end_time-meetings[i].start_time+1
         // console.log(gap)
@@ -88,7 +90,6 @@ Component({
             }
             array.push(word)
           }
-          // console.log(array)
           for(var k=meetings[i].start_time;k<=meetings[i].end_time;k++){
             this.setData({
               ["wordList["+k+"]"] : array[k-meetings[i].start_time],
@@ -171,10 +172,18 @@ Component({
             duration : 1000
           })
         }
+      }else{   //这是在用户个人预定信息界面，如果点击到了预定的信息提示用户是否删除
+        var index = parseInt(e.currentTarget.id)
+        if(this.data.tapList[index]==false){  //点击部分被预定了
+          this.delete(index)
+        }
       }
     },
     change: function(){
       this.triggerEvent('change', { start_time: this.data.start_time,end_time: this.data.end_time }, { })
+    },
+    delete: function (index) {
+      this.triggerEvent('delete', { index: index}, { })
     },
   }
 })

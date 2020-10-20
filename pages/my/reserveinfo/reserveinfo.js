@@ -8,6 +8,7 @@ Page({
   data: {
     select_date : "",
     select_room : "",
+    meetings : [],
   },
 
   room_select_change : function(e){
@@ -24,6 +25,59 @@ Page({
     this.initMeetingData()
   },
 
+  meeting_delete: function (e) {
+    var index = e.detail.index
+    var page = this
+    let i
+    wx.showModal({
+      title: '取消会议',
+      content: '确定要取消这个会议吗?',
+      success (res) {
+        if (res.confirm) {
+          //判断选中的是哪个会议记录
+          for(i=0;i<page.data.meetings.length;i++){
+            if(index>=page.data.meetings[i].start_time && index<=page.data.meetings[i].end_time){  //判断选中的是这个会议
+              wx-wx.request({
+                url: 'http://'+app.globalData.host+':'+app.globalData.port+'/meeting/deleteMeeting',
+                method : "GET",
+                dataType : "json",
+                data: {
+                  "meeting_id" : page.data.meetings[i].meeting_id,
+                },
+                success: (result) => {
+                  if(result.data.data==1){
+                    wx.showToast({
+                      title: '删除成功',
+                      icon : 'success',
+                      duration : 1000,
+                      success:function(){ 
+                        setTimeout(function () { 
+                          page.initMeetingData()
+                        }, 1000) 
+                    }
+                    })
+                  }else{
+                    wx.showToast({
+                      title: '删除失败',
+                      icon : 'none',
+                      duration : 1000,
+                    })
+                  }
+                },
+                fail: (res) => {console.log(res)},
+                complete: (res) => {},
+              })
+              return
+            }
+          }
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
+    
+  },
+
   initMeetingData : function(){
     //获取服务端会议记录
     var page = this
@@ -37,6 +91,9 @@ Page({
         "room" : page.data.select_room,
       },
       success: (result) => {
+        page.setData({
+          meetings : result.data.data,
+        })
        this.selectComponent("#time_select").initData(result.data.data,false)
       },
       fail: (res) => {console.log(res)},

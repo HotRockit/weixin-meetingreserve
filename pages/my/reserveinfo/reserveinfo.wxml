@@ -1,5 +1,5 @@
 <!--pages/my/reserveinfo/reserveinfo.wxml-->
 <date_select id="date_select" bindchange="date_select_change"></date_select>
 <room_select id="room_select" bindchange="room_select_change"></room_select>
-<time_select id="time_select"></time_select>
+<time_select id="time_select" binddelete="meeting_delete"></time_select>
 <view class="free"></view>

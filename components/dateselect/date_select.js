@@ -35,7 +35,7 @@ Component({
       }
       end_date = new Date(end_date)
       if (isNaN(end_date)) {
-        end_date = this.addDay(start_date, 5)
+        end_date = this.addDay(start_date, 6)
       }
       start_date = new Date(this.dateId(start_date))
       end_date = new Date(this.dateId(end_date))
