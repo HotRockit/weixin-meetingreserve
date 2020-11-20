@@ -70,11 +70,15 @@ Page({
           "password" : page.data.password,
         },
         success: (result) => {
-          console.log(result.data.data.username)
-          console.log(result.data.data.password)
           if(result.data.data.username==""){  //没有此用户
             wx.showToast({
               title: '用户名或密码错误',
+              icon : 'none',
+              duration : 1000
+            })
+          }else if(result.data.data.state==1){  //账号被冻结了
+            wx.showToast({
+              title: '账号已被冻结',
               icon : 'none',
               duration : 1000
             })
@@ -90,7 +94,7 @@ Page({
             })
             wx.showToast({
               title: '登陆成功',
-              icon : 'none',
+              icon : 'success',
               duration : 1000,
               success:function(){ 
                 setTimeout(function () { 
